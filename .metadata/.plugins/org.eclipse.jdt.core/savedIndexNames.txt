@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\heals\Desktop\Data Structure Practice\.metadata\.plugins\org.eclipse.jdt.core
+2178751970.index
+113558702.index
