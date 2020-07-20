@@ -52,7 +52,7 @@ public class Array {
 	}
 	
 	public void reverse() {
-		int count = counter-1;
+		int count = counter;
 		int[] copy = new int[array.length];
 		for(int i = 0; i < array.length ; i++) {
 			copy[i] = array[count];

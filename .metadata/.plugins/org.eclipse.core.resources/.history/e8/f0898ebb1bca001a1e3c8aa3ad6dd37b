@@ -51,16 +51,6 @@ public class Array {
 		return maximum;
 	}
 	
-	public void reverse() {
-		int count = counter-1;
-		int[] copy = new int[array.length];
-		for(int i = 0; i < array.length ; i++) {
-			copy[i] = array[count];
-			count--;
-		}
-		array = copy;
-	}
-	
 	public void print() {
 		for(int i = 0; i < counter; i++) {
 			System.out.print(array[i] + ", ");

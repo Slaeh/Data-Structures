@@ -14,7 +14,6 @@ public class Main {
 		test.insert(0);
 		test.insert(1);
 		test.insert(2);
-		test.print();
 		test.reverse();
 		test.print();
 		
