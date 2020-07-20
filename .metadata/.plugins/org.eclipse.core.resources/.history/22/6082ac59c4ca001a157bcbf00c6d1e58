@@ -10,14 +10,14 @@ public class Main {
 		test.print();
 		test.removeAt(3);
 		test.print();
-		System.out.println(test.indexOf(2));
+		System.out.println(test.indexOf(2));*/
 		test.insert(0);
 		test.insert(1);
 		test.insert(2);
 		test2.insert(0);
 		test2.insert(5);
 		test2.insert(7);
-		test.intersect(test2);*/
+		test.intersect(test2);
 		
 	}
 }
