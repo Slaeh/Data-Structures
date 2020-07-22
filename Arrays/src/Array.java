@@ -27,7 +27,7 @@ public class Array {
 		if(index < 0 || index >= counter) {
 			throw new IllegalArgumentException("Index not valid");
 		}else {
-			for(int i = index; i < counter; i++) {
+			for(int i = index; i < counter-1; i++) {
 				array[i] = array[i+1];
 			}
 			counter--;
