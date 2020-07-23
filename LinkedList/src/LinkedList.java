@@ -95,4 +95,15 @@ public class LinkedList<E> {
 	public boolean contains(E data) {
 		return indexOf(data) != -1;
 	}
+	
+	public void reverse() {
+		Node<E> currentNode = this.head;
+		Node<E> nextNode = this.head.next;
+		while(currentNode.next != null) {
+			currentNode = currentNode.next;
+		}
+		head = currentNode.next;
+		
+		
+	}
 }
