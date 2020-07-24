@@ -97,13 +97,16 @@ public class LinkedList<E> {
 	}
 	
 	public void reverse() {
-		Node<E> currentNode = this.head;
-		Node<E> nextNode = this.head.next;
+		Node<E> lastNode = this.head;
+		Node<E> currentNode = this.head.next;
 		while(currentNode.next != null) {
-			currentNode = currentNode.next;
+			Node<E> nextNode = currentNode.next;
+			currentNode.next = lastNode;
+			lastNode = currentNode;
+			currentNode = nextNode;
 		}
-		head = currentNode.next;
-		
-		
+		this.tail = this.head;
+		this.tail.next = null;
+		this.tail = lastNode;
 	}
 }
