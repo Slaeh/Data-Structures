@@ -61,4 +61,47 @@ public class DoublyLinkedList<E> {
 		lastHeader.last = newNode;
 	}
 	
+	public void addLast(E data) {
+		Node<E> newNode = new Node<E>(data);
+		if(this.isEmpty()) {
+	    	this.head.next = newNode;
+	    	this.tail.last = newNode;
+	    	newNode.last = this.head;
+	    	newNode.next = this.tail;
+	    	this.size++;
+		}
+		
+		Node<E> lastTail = this.tail.last;
+		lastTail.next = newNode;
+		newNode.next = this.tail;
+		newNode.last = lastTail;
+		this.tail.last = newNode;
+		this.size++;
+	}
+	
+	public E removeFirst() {
+		if(this.isEmpty()) {
+			return null;
+		}
+		E value = this.head.next.data;
+		Node<E> newHead = this.head.next.next;
+		this.head.next = null;
+		this.head.next = newHead;
+		newHead.last = this.head;
+		this.size--;
+		return value;
+	}
+	
+	public E removeLast() {
+		if(this.isEmpty()) {
+			return null;
+		}
+		E value = this.tail.last.data;
+		Node<E> newTail = this.tail.last.last;
+		this.tail.last = null;
+		this.tail.last = newTail;
+		newTail.next = this.tail;
+		this.size--;
+		return value;
+	}
 }
