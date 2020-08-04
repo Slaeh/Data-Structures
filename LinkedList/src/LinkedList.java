@@ -109,4 +109,23 @@ public class LinkedList<E> {
 		this.tail.next = null;
 		this.tail = lastNode;
 	}
+	
+	public E theKthNodeFromEnd(int number){
+		int counter = 0;
+		if(this.isEmpty()) {
+			throw new IllegalArgumentException();
+		}
+		Node<E> start = this.head;
+		Node<E> last = start; 
+		while(counter != number - 1) {
+			last = last.next;
+			counter++;
+		}
+		while(last.next != null) {
+			start = start.next;
+			last = last.next;
+		}
+		return start.data;
+		
+	}
 }
