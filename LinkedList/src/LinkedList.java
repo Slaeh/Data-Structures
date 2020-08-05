@@ -128,4 +128,20 @@ public class LinkedList<E> {
 		return start.data;
 		
 	}
+	
+	public void middleNode() {
+		Node<E> tracker = this.head;
+		int counter = 0;
+		if(this.isEmpty()) {
+			throw new IllegalStateException();
+		}
+		while(counter != this.size /2) {
+			tracker = tracker.next;
+			counter++;
+		}
+		if(this.size % 2 == 1) {
+			System.out.println(tracker.data);
+		}
+		System.out.println(tracker.data + ", " + tracker.next.data);
+	}
 }
