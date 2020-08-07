@@ -111,10 +111,10 @@ public class LinkedList<E> {
 	}
 	
 	public E theKthNodeFromEnd(int number){
-		int counter = 0;
-		if(this.isEmpty()) {
-			throw new IllegalArgumentException();
+		if(this.isEmpty() || number <= 0) {
+			throw new IllegalArgumentException("Not valid");
 		}
+		int counter = 0;
 		Node<E> start = this.head;
 		Node<E> last = start; 
 		while(counter != number - 1) {
@@ -129,7 +129,7 @@ public class LinkedList<E> {
 		
 	}
 	
-	public void middleNode() {
+	public void middleNodeWithSize() {
 		Node<E> tracker = this.head;
 		int counter = 0;
 		if(this.isEmpty()) {
@@ -143,5 +143,18 @@ public class LinkedList<E> {
 			System.out.println(tracker.data);
 		}
 		System.out.println(tracker.data + ", " + tracker.next.data);
+	}
+	
+	public boolean hasLoop() {
+		Node<E> slow = this.head;
+		Node<E> fast = slow;
+		while(slow != null && fast != null && fast.next != null){
+			slow = slow.next;
+			fast = fast.next.next;
+			if(slow == fast) {
+				return true;
+			}
+		}
+		return false;
 	}
 }
