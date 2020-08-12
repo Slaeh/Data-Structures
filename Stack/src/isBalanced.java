@@ -11,16 +11,16 @@ public class isBalanced {
 					return false;
 				}else {
 					var symbol = stack.pop();
-					if(symbol =='(' && input.charAt(i) == ')' || 
-					   symbol == '<' && input.charAt(i) == '>'||
-					   symbol == '[' && input.charAt(i) == ']'||
-					   symbol == '{' && input.charAt(i) == '}') {
+					if(symbol =='(' && input.charAt(i) != ')' || 
+					   symbol == '<' && input.charAt(i) != '>'||
+					   symbol == '[' && input.charAt(i) != ']'||
+					   symbol == '{' && input.charAt(i) != '}') {
 						
-						return true;
+						return false;
 					}
 				}
 			}
 		}
-		return false;
+		return true;
 	}
 }
