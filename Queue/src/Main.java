@@ -1,16 +1,22 @@
-import java.util.ArrayDeque;
+import java.util.Arrays;
 import java.util.Queue;
 import java.util.Stack;
 
 public class Main {
 	public static void main(String[] args) {
-		Queue<Integer> queue = new ArrayDeque<>();
+		/*Queue<Integer> queue = new ArrayDeque<>();
 		queue.add(10);
 		queue.add(20);
 		queue.add(30);
 		System.out.println(queue);
 		reverseQueue(queue);
-		System.out.println(queue);
+		System.out.println(queue);*/
+		
+		ArrayQueue arr = new ArrayQueue(5);
+		arr.enqueue(0);
+		arr.enqueue(1);
+		arr.enqueue(2);
+		System.out.println(arr);
 	}
 	
 	public static void reverseQueue(Queue<Integer> queue) {
